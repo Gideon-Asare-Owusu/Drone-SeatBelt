@@ -12,20 +12,20 @@ This project uses a **drone-mounted (UAV) camera** and a **customized YOLO11 dee
 ## Installation
 Clone this repository:
 ```bash
-https://github.com/Gideon-Asare-Owusu/Drone-SeatBelt.git
-cd your-repo
+git clone https://github.com/Gideon-Asare-Owusu/Drone-SeatBelt.git
+cd Drone-SeatBelt
 pip install -r requirements.txt
 ```
 
 ## Usage
-Run detection on test images:
+Run detection on a video or image folder:
 ```bash
-python detect.py --weights best.pt --source test_images/
+python detect.py --weights runs/train/SeatBelt/weights/best.pt --source test_images/
 ```
 
-Train the model:
+Train the model from scratch:
 ```bash
-python train.py --data data.yaml --weights yolov11.pt --epochs 200
+python train.py --data data.yaml
 ```
 
 ## Results
